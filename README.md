@@ -1,28 +1,25 @@
 # egg-validate
 
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
-[![npm download][download-image]][download-url]
-
-[npm-image]: https://img.shields.io/npm/v/egg-validate.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-validate
-[travis-image]: https://img.shields.io/travis/eggjs/egg-validate.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-validate
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-validate.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-validate?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-validate.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-validate
-[snyk-image]: https://snyk.io/test/npm/egg-validate/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-validate
-[download-image]: https://img.shields.io/npm/dm/egg-validate.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-validate
-
-Validate plugin for egg.
-
 See [parameter](https://github.com/node-modules/parameter) for more information such as custom rule.
+
+# 源码分析
+
+## 文件结构
+
+``` bash
+├── app
+|  └── extend
+|     └── context.js - 封装ctx.validate方法，基于app.validator，进行校验和异常报错
+├── app.js - 给app.validator挂上parameter模块暴露的校验器
+├── config
+|  └── config.default.js
+```
+
+## 外部模块依赖
+
+主要是基于[parameter模块](https://github.com/node-modules/parameter) - 参数校验工具，被egg-validator使用，苏千开发。
+
+
 
 ## Install
 

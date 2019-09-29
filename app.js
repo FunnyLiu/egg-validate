@@ -24,5 +24,6 @@ module.exports = app => {
    * });
    * ```
    */
+  // 直接暴露实例
   app.validator = new Parameter(app.config.validate);
 };

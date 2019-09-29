@@ -10,6 +10,7 @@ module.exports = {
   validate(rules, data) {
     data = data || this.request.body;
     const errors = this.app.validator.validate(rules, data);
+    // 进行校验和异常报错
     if (errors) {
       this.throw(422, 'Validation Failed', {
         code: 'invalid_param',
