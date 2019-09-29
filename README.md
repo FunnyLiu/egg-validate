@@ -4,6 +4,8 @@ See [parameter](https://github.com/node-modules/parameter) for more information 
 
 # 源码分析
 
+基于parameter模块，对参数格式和值进行校验。挂在ctx.validate上。
+
 ## 文件结构
 
 ``` bash
